@@ -32,14 +32,14 @@
                 <li>HTML corrections on social media icons</li>
                 <li>Made the CSS more DRY</li>
                 <li>Corrected URLs</li>
-                <li>Add validation to contact form</li>
+                <li>Added validation to contact form</li>
               </ol>
               <h3>How I changed It</h3>
               <p><span>(1) CSS</span>: Instead of having 1 text shadow, I added 4 text shadows; above, below, left and right. Behaves like a text border.</p>
               <p><span>(2) HTML</span>: Moved anchors from being outside to inside of li in dropdown menu. <span>CSS</span>: To make the container(li) clickable and not only the text, displayed anchor as block, where width and height is 100%</p>
 
               <p><span>(3) HTML</span>: Removed label wrapper for social media anchors in footer.</p>
-              <p><span>(4) CSS</span>: Many HTML elements got same/similar styling but with different classes. Changed this so they have same classes. For example: elements in input form and donate form, elements with same color, images with same styling.</p>
+              <p><span>(4) CSS</span>: Many HTML elements got same/similar styling but with different classes. Changed this so they have same classes. For example: elements in contact and donate form, elements with same color, images with same styling.</p>
               <p><span>(5) HTML</span>: Removed forward slashes in front of the URLs</p>
               <p>
                 <span>(6) HTML</span>: Added error message below each input field. <span>CSS</span>: Error message is displayed as none as default. Added a new class cta-opacity that gives the "send button" a style of 50% opacity and no-hover effects. It occurs as disabled until each input is
@@ -73,7 +73,7 @@
               <h3>What Was Changed</h3>
               <ol>
                 <li>Aligned and resized items in navbar</li>
-                <li>Reduce distance between product images and their grid header.</li>
+                <li>Reduced distance between product images and their grid header.</li>
                 <li>Added content to footer</li>
                 <li>Adjusted distance for elements and containers in the pages product details and checkout</li>
                 <li>Made the search input in NAV-bar functional</li>
@@ -95,8 +95,8 @@
                 following message is displayed: "No products found".
               </p>
               <p>
-                <span>(6) JS</span>: Instead of having two JS-files, one for women.html and one for men.html, I merged them together with minimal extra lines (3 lines). In function getProducts I add an if statement on window.location.href to check what html page is visited and stores the response in
-                a variable that is used to gather data.<spanblock> Merged product-details.js and imagesSlider.js, both used in product-specific.html. </spanblock>
+                <span>(6) JS</span>: Instead of having two JS-files, one for women.html and one for men.html, I merged them together with minimal extra lines (3 lines). In function getProducts I added an if statement on window.location.href to check what html page is visited and stores the response
+                in a variable that is used to gather data.<spanblock> Merged product-details.js and imagesSlider.js, both used in product-specific.html. </spanblock>
                 <spanblock>Index.js created a separate function for innerhtml, so that there are no need to repeat the same script twice. </spanblock>
               </p>
               <p><span>(7)</span> Went through local image folder and removed those that could rather be stored in API.</p>
@@ -126,16 +126,18 @@
               </div>
               <h3>What Was Changed</h3>
               <ol>
-                <li>Keep color on header short box post when viewport is mobile size</li>
-                <li>Dont show other elements than the loading circle in blogs and specific-blog. Try to center</li>
-                <li>Post contact submit to API</li>
-                <li>Make comment section on posts</li>
+                <li>Let the H2 keep the same color, in carousel posts when viewport gets narrower, as when its hovered in larger viewport</li>
+                <li>Hide hard coded elements while fetching data from API in posts and specific post pages.</li>
               </ol>
               <h3>How I changed It</h3>
-              <p>test test</p>
-              <p>Something something something something something something something</p>
+              <p><span>(1) CSS</span>: Added the color #f2be22 as default color in media queries file when max-width is below 750px.</p>
+              <p>
+                <span>(2) HTML</span> Added unique classes to HTML elements in posts.html and posts-specific.html, so the added styling in CSS would not affect the two pages in same way. Reason to this is that the loader is structured in different ways (should have structured the loader in same way,
+                but too much to edit for now). <span>CSS</span>: Edit the display of hardcoded elements to "none". <span>JS</span>: When fetching data is finish, I changed the display of the elements that where hidden to how they were originally displayed.
+              </p>
               <h3>Why I make these changes</h3>
-              <p>Something something</p>
+              <p><span>(1)</span> Make the website more consistent. The H3 colors on the short boxes in blogs page also contains this color.</p>
+              <p><span>(2)</span> The hard coded elements are hidden because the pages looks cleaner while fetching data from API.</p>
             </div>
           </div>
         </div>
