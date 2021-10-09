@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to this Portfolio. Here you will find the 3 projects I have been working on this 1 year at Noroff and what changes I have done to them." />
+    <title>Portfolio Page</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/70984d4de4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Portfolio Report</div>
+    </header>
+    <main>
+      <section>
+        <h1>Projects</h1>
+        <div class="website">
+          <i class="fas fa-plus semester-sign"></i>
+          <div>
+            <h2>Semester Project 1</h2>
+            <p class="origin">Deployed before changes: 28 February 2021</p>
+            <div class="semester-content display">
+              <div class="links">
+                <a href="https://condescending-bhaskara-f28b40.netlify.app/">Website</a>
+                <a href="https://github.com/lassopicasso/semester-project-1-updated.git">Github</a>
+              </div>
+              <h3>What Was Changed</h3>
+              <ol>
+                <li>Changed text-shadow on homepage images texts</li>
+                <li>Moved li's outside of anchors</li>
+                <li>HTML corrections on social media icons</li>
+                <li>Made the CSS more DRY</li>
+                <li>Corrected URLs</li>
+                <li>Add validation to contact form</li>
+              </ol>
+              <h3>How I changed It</h3>
+              <p><span>(1) CSS</span>: Instead of having 1 text shadow, I added 4 text shadows; above, below, left and right. Behaves like a text border.</p>
+              <p><span>(2) HTML</span>: Moved anchors from being outside to inside of li in dropdown menu. <span>CSS</span>: To make the container(li) clickable and not only the text, displayed anchor as block, where width and height is 100%</p>
+
+              <p><span>(3) HTML</span>: Removed label wrapper for social media anchors in footer.</p>
+              <p><span>(4) CSS</span>: Many HTML elements got same/similar styling but with different classes. Changed this so they have same classes. For example: elements in input form and donate form, elements with same color, images with same styling.</p>
+              <p><span>(5) HTML</span>: Removed forward slashes in front of the URLs</p>
+              <p>
+                <span>(6) HTML</span>: Added error message below each input field. <span>CSS</span>: Error message is displayed as none as default. Added a new class cta-opacity that gives the "send button" a style of 50% opacity and no-hover effects. It occurs as disabled until each input is
+                correct. <span>JS</span>: When user unfocus an input field, the JS script checks if the input is validated or not. It also continuously control if every input field is validated. If the unfocused input field is not correct an error message displays. If all input fields are correct,
+                the "send button" is no longer disabled.
+              </p>
+              <h3>Why I make these changes</h3>
+              <p><span>(1)</span> Added "text border" on the text on images because of feedback from tutor that it was not so readable.</p>
+              <p><span>(2)</span> The only legal element allowed inside an "ul" is li. Anchor cannot be wrapped around li element. Therefore, it has to be inside the li element.</p>
+              <p><span>(3)</span> Unnecessary to wrap label around social media anchors. They don't contribute to anything.</p>
+              <p><span>(4)</span> Making the CSS more DRY. Easier to do changes. Reduced the CSS script with approx 60 lines, but still much potential for a DRYer CSS.</p>
+              <p><span>(5)</span> Unnecessary to have forward slashes in front the URLs. Feedback from tutor.</p>
+              <p><span>(6)</span> Makes the website more interactive and the user probably experience a better user journey where he/she can be sure that the inputs were correct when sending.</p>
+            </div>
+          </div>
+        </div>
+        <div class="website">
+          <i class="fas fa-plus cross-course-sign"></i>
+          <div>
+            <h2>Cross-Course Project</h2>
+            <p class="origin">Deployed before changes: 22 August 2021</p>
+            <div class="cross-course-content display">
+              <div class="links">
+                <a href="https://distracted-shaw-f1cd09.netlify.app/">Website</a>
+                <a
+                  href="
+            https://github.com/lassopicasso/cross-course-project-update.git"
+                  >Github</a
+                >
+              </div>
+              <h3>What Was Changed</h3>
+              <ol>
+                <li>Aligned and resized items in navbar</li>
+                <li>Reduce distance between product images and their grid header.</li>
+                <li>Added content to footer</li>
+                <li>Adjusted distance for elements and containers in the pages product details and checkout</li>
+                <li>Made the search input in NAV-bar functional</li>
+                <li>Make javascript codes run more efficient</li>
+                <li>Removed redundant images stored locally</li>
+              </ol>
+              <h3>How I changed It</h3>
+              <p><span>(1) CSS</span>: Resized the search icon from 24 to 26px, gave the placeholder 1em and aligned-items center for the items in the container.</p>
+              <p><span>(2) CSS</span>: Removed the margin 20px that I had added on the images inside the grid. Not sure why It was added a margin there in first place. Unnecessary to have a margin-top on the images in grid when the container have a margin-top as well.</p>
+              <p>
+                <span>(3) HTML</span>: Replaced the information icon (which was the only element in footer) and added divs containing the elements company info, links and social media icons. <span>CSS</span>: Displays the divs as flex with a space-around justify-content and a max-width equal to main
+                container.
+              </p>
+              <p><span>(4) CSS</span>: For the checkout page I removed the top and bottom margin for H1, also added margin for main container to the navbar and footer. The specific product page add display height 100% to the main.</p>
+              <p>
+                <span>(5) HTML</span>: Added an empty div in the search form, where any given match on input displays in a dropdown list. <span>CSS</span>: The dropdown list of search results have a position absolute so I can place the dropdown list below the search input box. <span>JS</span>:
+                Created 2 arrays, one contains only the product titles and one contains all data in API. When an "keyup" interaction occurs it calls the function showResults. This function first controls input length, if the length is more than 0 it calls a second function that filters the title
+                array. Any titles that matches is returned to the first function and collected in a new array. The titles from this array are being displayed in a dropdown list wrapped in an anchor which redirects the user to product details page if clicked on. However, if no titles is found,
+                following message is displayed: "No products found".
+              </p>
+              <p>
+                <span>(6) JS</span>: Instead of having two JS-files, one for women.html and one for men.html, I merged them together with minimal extra lines (3 lines). In function getProducts I add an if statement on window.location.href to check what html page is visited and stores the response in
+                a variable that is used to gather data.<spanblock> Merged product-details.js and imagesSlider.js, both used in product-specific.html. </spanblock>
+                <spanblock>Index.js created a separate function for innerhtml, so that there are no need to repeat the same script twice. </spanblock>
+              </p>
+              <p><span>(7)</span> Went through local image folder and removed those that could rather be stored in API.</p>
+              <h3>Why I make these changes</h3>
+              <p><span>(1)</span> Adjusted the items in the navbar because they didn't seem to be inline and with different sizes.</p>
+              <p><span>(2)</span> It didn't look good. It was too much distance between the images and their header above them.</p>
+              <p><span>(3)</span> The footer looked empty and not finished. Therefore I added more elements to the footer.</p>
+              <p>
+                <span>(4)</span> For checkout page there was too much space above and below the H1. When the viewport got narrower, there wasn't any margin for the container to the navbar and footer. To make this page more consistent with the other pages I added margins. For the product specific
+                page, when the viewport was large enough the background color in main was only surrounding the container. So there was a gap between navbar/footer and the background-color in main.
+              </p>
+              <p><span>(5)</span> If there are many products in the online store, and a potential customer is looking for a specific product, the search function facilitates the search of this product.</p>
+              <p><span>(7)</span> Reduce the size of the website. Makes it go faster.</p>
+            </div>
+          </div>
+        </div>
+        <div class="website">
+          <i class="fas fa-plus exam-sign"></i>
+          <div>
+            <h2>Exam Project 1</h2>
+            <p class="origin">Deployed before changes: 26 September 2021</p>
+            <div class="exam-content display">
+              <div class="links">
+                <a href="https://infallible-wilson-a02ce6.netlify.app">Website</a>
+                <a href="https://github.com/lassopicasso/Project-Exam---updated.git">Github</a>
+              </div>
+              <h3>What Was Changed</h3>
+              <ol>
+                <li>Keep color on header short box post when viewport is mobile size</li>
+                <li>Dont show other elements than the loading circle in blogs and specific-blog. Try to center</li>
+                <li>Post contact submit to API</li>
+                <li>Make comment section on posts</li>
+              </ol>
+              <h3>How I changed It</h3>
+              <p>test test</p>
+              <p>Something something something something something something something</p>
+              <h3>Why I make these changes</h3>
+              <p>Something something</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">Developer: Lars W.</div>
+    </footer>
+    <script src="js/portfolio.js"></script>
+  </body>
+</html>
